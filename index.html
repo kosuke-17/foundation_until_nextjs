@@ -1,20 +1,29 @@
 <html>
   <body>
     <div id="app"></div>
-    <script type="text/javascript">
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Babel Script -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/jsx">
       // divの要素を取得
       const app = document.getElementById("app");
-      // h1エレメントを作成
-      const header = document.createElement("h1");
-
-      // h1要素のために文字を作成
-      const headerContent = document.createTextNode("開発、プレビュー、配送");
-
-      // h1要素に文字を追加
-      header.appendChild(headerContent);
-
-      // div要素にh1要素を追加
-      app.appendChild(header);
+      ReactDOM.render("<h1>開発、プレビュー、配送</h1>", app);
     </script>
   </body>
 </html>
+
+<!-- <script type="text/javascript">
+  // divの要素を取得
+  const app = document.getElementById("app");
+  // h1エレメントを作成
+  const header = document.createElement("h1");
+  // h1要素のために文字を作成
+  const headerContent = document.createTextNode("開発、プレビュー、配送");
+  // h1要素に文字を追加
+  header.appendChild(headerContent);
+  // div要素にh1要素を追加
+  app.appendChild(header);
+</script> -->
