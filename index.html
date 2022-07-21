@@ -16,12 +16,20 @@
       }
 
       function HomePage() {
+        const names = ["田中太郎", "佐藤次郎", "鈴木三郎"]
         return (
           <div>
             {/* Nesting the Header component */}
             <Header title="React title1" />
             <Header title="React title2" />
             <Header title="React title3" />
+            <ul>
+              {names.map((name, idx) => (
+                <div key={idx}>
+                <li>{name}</li>
+                </div>
+                ))}
+            </ul>
           </div>
         );
       }
