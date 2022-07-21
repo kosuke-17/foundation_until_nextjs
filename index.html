@@ -17,6 +17,11 @@
 
       function HomePage() {
         const names = ["田中太郎", "佐藤次郎", "鈴木三郎"]
+        const [likes, setLikes] = React.useState(0);
+
+        function addLike() {
+          setLikes(likes + 1)
+        }
         return (
           <div>
             {/* Nesting the Header component */}
@@ -30,6 +35,8 @@
                 </div>
                 ))}
             </ul>
+
+            <button onClick={addLike}>いいね({likes})</button>
           </div>
         );
       }
