@@ -8,9 +8,14 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <script type="text/jsx">
-      // divの要素を取得
-      const app = document.getElementById("app");
-      ReactDOM.render("<h1>開発、プレビュー、配送</h1>", app);
+      const app = document.getElementById("app")
+
+
+      function Header() {
+        return (<h1>Develop. Preview. Ship. 🚀</h1>)
+      }
+
+      ReactDOM.render(<Header />, app)
     </script>
   </body>
 </html>
