@@ -11,15 +11,17 @@
       const app = document.getElementById("app")
 
 
-      function Header() {
-        return (<h1>Develop. Preview. Ship. 🚀</h1>)
+      function Header({title}) {
+        return <h1>{title ? title : "デフォルトのタイトル"}</h1>
       }
 
       function HomePage() {
         return (
           <div>
             {/* Nesting the Header component */}
-            <Header />
+            <Header title="React title1" />
+            <Header title="React title2" />
+            <Header title="React title3" />
           </div>
         );
       }
